@@ -15,10 +15,12 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.3.1",
     "@types/node": "^18.8.2",
     "@types/react": "^18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
+    "classnames": "^2.3.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.24.0",
     "eslint-config-next": "12.3.1",

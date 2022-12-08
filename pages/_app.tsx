@@ -1,9 +1,9 @@
 import { AppPropsType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
-
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppPropsType): JSX.Element {
+
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppPropsType): JSX.Element {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

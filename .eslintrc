@@ -9,6 +9,7 @@
 		"@typescript-eslint/semi": [
 			"warn"
 		],
+		"@typescript-eslint/no-inferrable-types": "warn",
 		"@typescript-eslint/no-empty-interface": [
 			"error",
 			{

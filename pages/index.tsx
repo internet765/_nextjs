@@ -4,7 +4,7 @@ import { withLayout } from "../layout/Layout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 
-function Home({ menu }: HomeProps): JSX.Element {
+function Home({ menu, firstCategory }: HomeProps): JSX.Element {
   return (
     <div className="container">
 
@@ -26,7 +26,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      menu
+      menu,
+      firstCategory
     },
   };
 };

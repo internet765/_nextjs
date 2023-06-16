@@ -37,6 +37,15 @@
 	font-size: 12px;
 	line-height: 16px;
 }
+
+.secondLevelBlock {
+	display: none;
+}
+
+.secondLevelBlockOpened {
+	display: block;
+}
+
 .secondLevelBlockOpened:last-child {
 	margin-bottom: 20px;
 }

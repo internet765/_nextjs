@@ -9,11 +9,9 @@ import { ParsedUrlQuery } from "querystring";
 
 const firstCategory = 0;
 
-
 function Course({ menu, page, products }: CourseProps): JSX.Element {
 
   return (
-      
     <div className="container">
       {products && products.length}
     </div>
@@ -23,16 +21,16 @@ function Course({ menu, page, products }: CourseProps): JSX.Element {
 export default withLayout(Course);
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const { data: menu } = await axios.post<MenuItem[]>(
-        process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
-        {
-          firstCategory,
-        }
-      );
-    return {
-        paths: menu.flatMap(m=> m.pages.map(p => '/courses/' + p.alias)),
-        fallback: true
-    };
+  const { data: menu } = await axios.post<MenuItem[]>(
+    process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
+    {
+      firstCategory,
+    }
+  );  
+  return {
+    paths: menu.flatMap((m) => m.pages.map((p) => "/courses/" + p.alias)),
+    fallback: true,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async ({
@@ -43,11 +41,10 @@ export const getStaticProps: GetStaticProps = async ({
       notFound: true,
     };
   }
+
   const { data: menu } = await axios.post<MenuItem[]>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
-    {
-      firstCategory,
-    }
+    { firstCategory }
   );
 
   const { data: page } = await axios.get<TopPageModel>(

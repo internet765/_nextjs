@@ -4,10 +4,11 @@ import { withLayout } from "../layout/Layout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 
-function Home({ menu, firstCategory }: HomeProps): JSX.Element {
+function Home({ menu }: HomeProps): JSX.Element {
+  const [rating, setRating] = useState<number>(4);
+
   return (
     <div className="container">
-
     </div>
   );
 }
@@ -26,8 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      menu,
-      firstCategory
+      menu
     },
   };
 };

@@ -10,9 +10,16 @@ import {
 import { ProductModel } from "../../interfaces/product.interface";
 import { ParsedUrlQuery } from "querystring";
 import { firstLevelMenu } from "../../helpers/helpers";
+import TopPageComponent from "../../page-components/TopPageComponent/TopPageComponent";
 
-function TopPage({ products }: CourseProps): JSX.Element {
-  return <div className="container">{products && products.length}</div>;
+function TopPage({ products, page, firstCategory }: TopPageProps): JSX.Element {
+  return (
+    <TopPageComponent
+      page={page}
+      firstCategory={firstCategory}
+      products={products}
+    />
+  );
 }
 
 export default withLayout(TopPage);
@@ -93,7 +100,7 @@ export const getStaticProps: GetStaticProps = async ({
   }
 };
 
-export interface CourseProps extends Record<string, unknown> {
+export interface TopPageProps extends Record<string, unknown> {
   menu: MenuItem[];
   firstCategory: TopLevelGategory;
   page: TopPageModel;

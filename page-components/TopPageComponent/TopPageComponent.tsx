@@ -1,6 +1,6 @@
 import React from "react";
 import { TopPageComponentProps } from "./TopPageComponent.props";
-import { Htag, Tag, HhData } from "../../components";
+import { Htag, Tag, HhData, Advantages, P } from "../../components";
 import style from "./TopPageComponent.module.css";
 import { TopLevelGategory } from "../../interfaces/page.interface";
 
@@ -30,7 +30,11 @@ function TopPageComponent({
       {firstCategory === TopLevelGategory.Courses && page.hh && <HhData {...page.hh}/>}
       {page.advantages && page.advantages.length > 0 && <>
         <Htag tag='h2'>Приемущества</Htag>
+        <Advantages advantages={page.advantages}/>
       </>}
+      {page.seoText && <P>{page.seoText}</P>}
+      <Htag tag='h2'>Получаемые навыки</Htag>
+      {page.tags.map(t => (<Tag color="primary" key={t}>{t}</Tag>))}
     </div>
   );
 }

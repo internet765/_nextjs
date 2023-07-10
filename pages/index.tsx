@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import { withLayout } from "../layout/Layout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
+import { Input, Textarea } from "../components";
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);

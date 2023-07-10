@@ -15,3 +15,4 @@ export default withLayout(Search);
 // export const getStaticProps: GetStaticProps = async () => {
 
 // };
+

@@ -12,7 +12,3 @@ function Search(): JSX.Element {
 
 export default withLayout(Search);
 
-// export const getStaticProps: GetStaticProps = async () => {
-
-// };
-

@@ -8,6 +8,7 @@
 .logo {
 	grid-column: start / logoend;
 	grid-row: 1 / span 2;
+	margin-bottom: 20px;
 }
 
 .title,
@@ -121,7 +122,8 @@
 	margin-bottom: 5px;
 }
 
-.advantages, .disadvantages {
+.advantages,
+.disadvantages {
 	font-size: 16px;
 	font-style: normal;
 	padding-left: 15px;
@@ -134,4 +136,119 @@
 
 .disadvantages {
 	border-left: 2px solid var(--red);
+}
+
+
+.characteristic {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: end;
+	gap: 10px;
+	padding-right: 60px;
+	font-size: 16px;
+	font-style: normal;
+}
+
+.characteristicName {
+	font-weight: 700;
+}
+
+.characteristicDots {
+	border-bottom: 1px dashed var(--gray-light);
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1320px) {
+	.product {
+		grid-template-columns: 70px 30px auto 40px auto 40px;
+		grid-template-areas:
+			"logo . title title title title title"
+			"logo . tags tags tags tags tags"
+			"price price price . credit . rating"
+			"priceTitle priceTitle priceTitle . creditTitle . rateTitle"
+			"hr hr hr hr hr hr hr"
+			"description description description description description description description"
+			"feature feature feature feature feature feature feature"
+			"advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
+			"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
+			"actions actions actions actions actions actions actions";
+	}
+
+
+	.logo {
+		grid-area: logo;
+	}
+
+	.title {
+		grid-area: title;
+	}
+
+	.tags {
+		grid-area: tags;
+	}
+
+	.price {
+		grid-area: price;
+	}
+
+	.credit {
+		grid-area: credit;
+	}
+
+	.rating {
+		grid-area: rating;
+	}
+
+	.priceTitle {
+		grid-area: priceTitle;
+	}
+
+	.creditTitle {
+		grid-area: creditTitle;
+	}
+
+	.rateTitle {
+		grid-area: rateTitle;
+	}
+
+	.hr {
+		grid-area: hr;
+	}
+
+	.description {
+		grid-area: description;
+	}
+
+	.feature {
+		grid-area: feature;
+		margin-bottom: 20px;
+	}
+
+	.advBlock {
+		grid-area: advBlock;
+	}
+
+	.actions {
+		grid-area: actions;
+	}
+
+
+}
+
+@media screen and (max-width: 640px) {
+	.product {
+		grid-template-columns: 70px 30px 1fr;
+		grid-template-areas:
+			"logo . title"
+			"logo . tags"
+			"priceTitle priceTitle price"
+			"creditTitle creditTitle credit"
+			"priceTitle priceTitle rating"
+			"hr hr hr"
+			"description description description"
+			"feature feature feature"
+			"advBlock advBlock advBlock"
+			"hr2 hr2 hr2"
+			"actions actions actions";
+	}
 }

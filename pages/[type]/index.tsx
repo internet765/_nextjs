@@ -7,7 +7,7 @@ import { firstLevelMenu } from "../../helpers/helpers";
 import { ParsedUrlQuery } from "querystring";
 
 function Type({ menu }: TypeProps): JSX.Element {
-  return <div className="container"></div>;
+  return <div className='container'></div>;
 }
 
 export default withLayout(Type);

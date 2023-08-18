@@ -1,6 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
-import { ReviewModel } from "../../interfaces/product.interface";
-
+import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 export interface ReviewsFormProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
    productId: string
 }

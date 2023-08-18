@@ -14,16 +14,28 @@ export const ReviewsForm = ({
 	className,
 	...props
 }: ReviewsFormProps): JSX.Element => {
-	const { register, control, handleSubmit } = useForm<IReviewsForm>();
+	const {
+		register,
+		control,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<IReviewsForm>();
 
 	const onSubmit = (data: IReviewsForm) => {
+		
 		console.log(data);
 	};
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className={classnames(style.reviewsForm, className)} {...props}>
-				<Input {...register('name')} placeholder={'Им'} />
+				<Input
+					{...register('name', {
+						required: { value: true, message: 'Заполните им' },
+					})}
+					placeholder={'Им'}
+					error={errors.name}
+				/>
 				<Input
 					{...register('title')}
 					className={style.title}
@@ -35,8 +47,15 @@ export const ReviewsForm = ({
 					<Controller
 						control={control}
 						name='rating'
+						rules={{ required: { value: true, message: 'Заполните быстро!' } }}
 						render={({ field }) => (
-							<Rating isEditeble rating={field.value} setRating={field.onChange} />
+							<Rating
+								isEditeble
+								rating={field.value}
+								setRating={field.onChange}
+								ref={field.ref}
+								error={errors.rating}
+							/>
 						)}
 					/>
 				</div>

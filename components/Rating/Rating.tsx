@@ -3,13 +3,14 @@ import { RatingProps } from "./Rating.props";
 import classnames from "classnames";
 import StarIcon from "./Star.svg";
 import style from "./Rating.module.css";
+import { ForwardedRef, forwardRef } from 'react';
 
-export const Rating = ({
+export const Rating = forwardRef(({
   isEditeble = false,
   rating,
   setRating,
   ...props
-}: RatingProps): JSX.Element => {
+}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(
     new Array(5).fill(<></>)
   );
@@ -58,10 +59,10 @@ export const Rating = ({
   };
 
   return (
-    <div {...props}>
+    <div {...props} ref={ref}>
       {ratingArray.map((r, i) => (
         <span key={i}>{r}</span>
       ))}
     </div>
   );
-};
+});

@@ -5,13 +5,22 @@
 	padding: 6px 15px;
 	color: var(--black);
 	border: none;
-	outline-color: var(--primary);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	font-family: var(--font-family);
+	border: 1px solid transparent;
+}
+
+.input:focus {
+	outline: none;
+	border-color: yellowgreen;
 }
 
 .input::placeholder {
 	color: #A4A4A4;
+}
+
+.input.error {
+	border: 1px solid var(--red);
 }

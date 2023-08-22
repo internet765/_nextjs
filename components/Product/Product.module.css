@@ -14,7 +14,6 @@
 .title,
 .tags {
 	grid-column: titlestart / middle;
-
 }
 
 .price,
@@ -41,7 +40,7 @@
 	height: 1px;
 	border: none;
 	background: var(--gray-light);
-	margin: 20px 0 20px 0;
+	margin: 20px 0;
 }
 
 .description {
@@ -138,7 +137,6 @@
 	border-left: 2px solid var(--red);
 }
 
-
 .characteristic {
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -178,7 +176,6 @@
 			"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
 			"actions actions actions actions actions actions actions";
 	}
-
 
 	.logo {
 		grid-area: logo;
@@ -236,8 +233,6 @@
 	.actions {
 		grid-area: actions;
 	}
-
-
 }
 
 @media screen and (max-width: 640px) {

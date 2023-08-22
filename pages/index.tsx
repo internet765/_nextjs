@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GetStaticProps } from 'next';
 import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
-import { Input, Textarea } from '../components';
 
 function Home({ menu }: HomeProps): JSX.Element {
-	return <div className='container'></div>;
+	return <div className='container'>
+		asdasd
+	</div>;
 }
 
 export default withLayout(Home);

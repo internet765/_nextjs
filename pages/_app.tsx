@@ -2,7 +2,7 @@ import { AppPropsType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }: AppPropsType): JSX.Element {
+function MyApp({ Component, pageProps, router }: AppPropsType): JSX.Element {
 
   return (
     <>
@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppPropsType): JSX.Element {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
+				<meta property='og:url' content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}/>
       </Head>
       <Component {...pageProps} />
     </>

@@ -6,7 +6,7 @@
 	gap: 40px 30px;
 	grid-template-areas:
 		". header header ."
-		". sidebar body ." 
+		". sidebar body ."
 		"footer footer footer footer";
 }
 
@@ -33,7 +33,7 @@
 		grid-template-columns: minmax(320px, 1fr);
 		grid-template-areas:
 			"header"
-			"body" 
+			"body"
 			"footer";
 	}
 

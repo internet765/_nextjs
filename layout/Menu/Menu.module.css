@@ -13,7 +13,6 @@
 .firstLevelActive,
 .firstLevel:hover {
 	color: var(--primary);
-
 }
 
 .firstLevelActive svg,

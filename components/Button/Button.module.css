@@ -37,7 +37,7 @@
 
 .down {
 	transform: rotate(90deg);
-	transition: all .5s ease;
+	transition: all 0.5s ease;
 }
 
 .primary svg,

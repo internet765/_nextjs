@@ -9,7 +9,6 @@ import { Reviews } from '../Reviews/Reviews';
 import { ReviewsForm } from '../ReviewsForm/ReviewsForm';
 import { peiceRu } from '../../helpers/helpers';
 import { devlOfNumber } from '../../helpers/helpers';
-import Image from 'next/image';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -40,7 +39,7 @@ export const Product = motion(
 				{' '}
 				<Card className={style.product}>
 					<div className={style.logo}>
-						<Image src={process.env.NEXT_PUBLIC_DOMAIN + product.image} width={70} height={70} alt={product.title} />
+						<img src={process.env.NEXT_PUBLIC_DOMAIN + product.image} width={70} height={70} alt={product.title} />
 					</div>
 					<div className={style.title}>{product.title}</div>
 					<div className={style.price}>
